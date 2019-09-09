@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/vegas/dist/vegas.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <a href="index.html"><span style="font-size:30px"><i class="far fa-arrow-alt-circle-left back"></i>
+            Voltar</span></a>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="login">
+                    <div class="col-12 float-left button text-center">
+                        <h2>Login</h2>
+                    </div>
+                </div>
+                <form action="script.php" method="post">
+                    <span class="text">Email</span>
+                    <input type="email" placeholder="Insira seu email" name="email">
+                    <span class="text">Senha</span>
+                    <input type="password" placeholder="Insira sua senha" name="senha">
+                    <!-- <button class="btn btn-success">Entrar</button> -->
+                    <input class="btn btn-success" type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="node_modules/vegas/dist/vegas.min.js"></script>
+    <script>
+        $("#example, body").vegas({
+            slides: [
+                { src: "img/vegas/slide1.jpg" },
+                { src: "img/vegas/slide2.jpg" },
+                { src: "img/vegas/slide3.jpg" }
+            ],
+            transition: 'zoomOut',
+            delay: 50000
+        });
+
+    </script>
+</body>
+
+</html>
