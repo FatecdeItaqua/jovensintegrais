@@ -86,8 +86,36 @@
 
     <!-- Modal -->
     <div id="modal">
-        <!-- data-iziModal-fullscreen="true"  data-iziModal-title="Welcome"  data-iziModal-subtitle="Subtitle"  data-iziModal-icon="icon-home" -->
-        <!-- Modal content -->oin
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-10">
+                    <form class="form" method="POST" action="#">
+                        <div class="form-group">
+                            <label for="txbNome" class="text-form">Nome:</label>
+                            <input class="form-control" type="text" id="txbNome" class="" placeholder="Nome"
+                                required><br>
+                            <label for="txbCpf" class="text-form">CPF:</label>
+                            <input class="form-control" type="text" id="txbCpf" class="" placeholder="CPF"
+                                oninput="mascara(this, 'cpf')" required><br>
+                            <label for="txbEmail" class="text-form">E-Mail:</label>
+                            <input class="form-control" type="email" id="txbEmail" class="" placeholder="E-Mail"
+                                required><br>
+                            <label for="txbSenha" class="text-form">Senha:</label>
+                            <input class="form-control" type="password" id="txbSenha" class="" placeholder="Senha"
+                                required><br>
+                            <label for="cbbCargo" class="text-form">Cargo:</label>
+                            <select class="form-control" id="cbbCargo" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="psicolgo">Psicólogo</option>
+                                <option value="voluntario">Voluntário</option>
+                                <option value="estagiario">Estagiário</option>
+                            </select><br />
+                            <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
