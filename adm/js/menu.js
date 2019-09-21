@@ -9,15 +9,5 @@ $(() => {
     }
     prepararMenu()
 
-    $("#modal").iziModal({
-        title: 'Adicionar Usuário',
-        subtitle: 'Formulário para adicionar um novo usuário ao sistema',
-        headerColor: '#61ba6d'
-    });
-
-    $(document).on('click', '.trigger', function (event) {
-        event.preventDefault();
-        $('#modal').iziModal('open');
-    });
 
 })
