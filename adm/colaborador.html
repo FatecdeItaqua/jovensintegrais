@@ -1,0 +1,132 @@
+<header>
+    <div class="containe-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="title">Colaborador</h1>
+            </div>
+            <div class="col-md-2 offset-md-6">
+                <button type="button" class="btn btn-dark trigger">Novo
+                    Colaborador</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+</header>
+<section>
+    <div class="container">
+        <table class="table table-hover" id="listagem-colaboradores">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Profissão</th>
+                    <th scope="col">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="colaborador-1">
+                    <td scope="row">Enrique Gomes</td>
+                    <td>enrique.gomes@fatec.sp.gov.br</td>
+                    <td>Estagiário</td>
+                    <td>
+                        <i class="fas fa-edit editar-colaborador" data-id="1"></i>&nbsp<i
+                            class="fas fa-trash deletar-colaborador"></i>
+                    </td>
+                </tr>
+                <tr id="colaborador-2">
+                    <td scope="row">Lucas Medeiros</td>
+                    <td>lucas.medeiros@fatec.sp.gov.br</td>
+                    <td>Voluntário</td>
+                    <td><i class="fas fa-edit editar-colaborador" data-id="2"></i>&nbsp<i
+                            class="fas fa-trash deletar-colaborador"></i></td>
+                </tr>
+                <tr id="colaborador-3">
+                    <td scope="row">Gabriel Ferreira Campos</td>
+                    <td>gabriel.campos@fatec.sp.gov.br</td>
+                    <td>Psicólogo</td>
+                    <td><i class="fas fa-edit editar-colaborador" data-id="3"></i>&nbsp<i
+                            class="fas fa-trash deletar-colaborador"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- Modal Cadastrar Colaborador-->
+<div id="modal">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-10">
+                <form class="form" method="POST" action="#">
+                    <div class="form-group">
+                        <label for="txbNome" class="text-form">Nome:</label>
+                        <input class="form-control" type="text" id="txbNome" class="" placeholder="Nome" required><br>
+                        <label for="txbCpf" class="text-form">CPF:</label>
+                        <input class="form-control" type="text" id="txbCpf" class="" placeholder="CPF"
+                            oninput="mascara(this, 'cpf')" required><br>
+                        <label for="txbEmail" class="text-form">E-Mail:</label>
+                        <input class="form-control" type="email" id="txbEmail" class="" placeholder="E-Mail"
+                            required><br>
+                        <label for="txbSenha" class="text-form">Senha:</label>
+                        <input class="form-control" type="password" id="txbSenha" class="" placeholder="Senha"
+                            required><br>
+                        <label for="cbbCargo" class="text-form">Cargo:</label>
+                        <select class="form-control" id="cbbCargo" required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="Psicólogo">Psicólogo</option>
+                            <option value="Voluntário">Voluntário</option>
+                            <option value="Estagiário">Estagiário</option>
+                        </select><br />
+                        <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Editar Colaborador-->
+
+<div id="modal-editar">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-10">
+                <form class="form" method="POST" action="#">
+                    <div class="form-group">
+                        <label for="txbNome" class="text-form">Nome:</label>
+                        <input class="form-control" type="text" id="txbNome" class="" placeholder="Nome" required><br>
+                        <label for="txbCpf" class="text-form">CPF:</label>
+                        <input class="form-control" type="text" id="txbCpf" class="" placeholder="CPF"
+                            oninput="mascara(this, 'cpf')" required><br>
+                        <label for="txbEmail" class="text-form">E-Mail:</label>
+                        <input class="form-control" type="email" id="txbEmail" class="" placeholder="E-Mail"
+                            required><br>
+                        <label for="txbSenha" class="text-form">Senha:</label>
+                        <input class="form-control" type="password" id="txbSenha" class="" placeholder="Senha"
+                            required><br>
+                        <label for="cbbCargo" class="text-form">Cargo:</label>
+                        <select class="form-control" id="cbbCargo" required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="Psicólogo">Psicólogo</option>
+                            <option value="Voluntário">Voluntário</option>
+                            <option value="Estagiário">Estagiário</option>
+                        </select><br />
+                        <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#modal").iziModal({
+        title: 'Adicionar Colaborador',
+        subtitle: 'Formulário para adicionar um novo Colaborador ao sistema',
+        headerColor: '#61ba6d'
+    });
+
+    $("#modal-editar").iziModal({
+        title: "Editar Colaborador",
+        subtitle: 'Formulário para editar um novo Colaborador ao sistema',
+        headerColor: '#61ba6d'
+    })
+</script>
