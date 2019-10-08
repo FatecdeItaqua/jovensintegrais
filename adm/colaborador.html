@@ -4,7 +4,7 @@
             <div class="col-md-4">
                 <h1 class="title">Colaborador</h1>
             </div>
-            <div class="col-md-2 offset-md-6">
+            <div class="col-md-3 offset-md-5">
                 <button type="button" class="btn btn-dark trigger">Novo
                     Colaborador</button>
             </div>
@@ -29,23 +29,27 @@
                     <td>enrique.gomes@fatec.sp.gov.br</td>
                     <td>Estagiário</td>
                     <td>
-                        <i class="fas fa-edit editar-colaborador" data-id="1"></i>&nbsp<i
-                            class="fas fa-trash deletar-colaborador"></i>
+                        <i class="fas fa-edit editar-colaborador" data-id="1"></i>
+                        <i class="fas fa-trash deletar-colaborador" data-id="1"></i>
                     </td>
                 </tr>
                 <tr id="colaborador-2">
                     <td scope="row">Lucas Medeiros</td>
                     <td>lucas.medeiros@fatec.sp.gov.br</td>
                     <td>Voluntário</td>
-                    <td><i class="fas fa-edit editar-colaborador" data-id="2"></i>&nbsp<i
-                            class="fas fa-trash deletar-colaborador"></i></td>
+                    <td>
+                        <i class="fas fa-edit editar-colaborador" data-id="2"></i>
+                        <i class="fas fa-trash deletar-colaborador"></i>
+                    </td>
                 </tr>
                 <tr id="colaborador-3">
                     <td scope="row">Gabriel Ferreira Campos</td>
                     <td>gabriel.campos@fatec.sp.gov.br</td>
                     <td>Psicólogo</td>
-                    <td><i class="fas fa-edit editar-colaborador" data-id="3"></i>&nbsp<i
-                            class="fas fa-trash deletar-colaborador"></i></td>
+                    <td>
+                        <i class="fas fa-edit editar-colaborador" data-id="3"></i>
+                        <i class="fas fa-trash deletar-colaborador"></i>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -59,18 +63,18 @@
                 <form class="form" method="POST" action="#">
                     <div class="form-group">
                         <label for="txbNome" class="text-form">Nome:</label>
-                        <input class="form-control" type="text" id="txbNome" class="" placeholder="Nome" required><br>
+                        <input class="form-control" type="text" id="txtNome" class="" placeholder="Nome" required><br>
                         <label for="txbCpf" class="text-form">CPF:</label>
-                        <input class="form-control" type="text" id="txbCpf" class="" placeholder="CPF"
+                        <input class="form-control" type="text" id="txtCpf" class="" placeholder="CPF"
                             oninput="mascara(this, 'cpf')" required><br>
                         <label for="txbEmail" class="text-form">E-Mail:</label>
-                        <input class="form-control" type="email" id="txbEmail" class="" placeholder="E-Mail"
+                        <input class="form-control" type="email" id="txtEmail" class="" placeholder="E-Mail"
                             required><br>
                         <label for="txbSenha" class="text-form">Senha:</label>
-                        <input class="form-control" type="password" id="txbSenha" class="" placeholder="Senha"
+                        <input class="form-control" type="password" id="txtSenha" class="" placeholder="Senha"
                             required><br>
                         <label for="cbbCargo" class="text-form">Cargo:</label>
-                        <select class="form-control" id="cbbCargo" required>
+                        <select class="form-control" id="Cargo" required>
                             <option value="" disabled selected>Selecione uma opção</option>
                             <option value="Psicólogo">Psicólogo</option>
                             <option value="Voluntário">Voluntário</option>
@@ -130,3 +134,5 @@
         headerColor: '#61ba6d'
     })
 </script>
+
+<script src="../node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>

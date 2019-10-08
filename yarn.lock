@@ -17,6 +17,13 @@ bulma@^0.7.5:
   resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.5.tgz#35066c37f82c088b68f94450be758fc00a967208"
   integrity sha512-cX98TIn0I6sKba/DhW0FBjtaDpxTelU166pf7ICXpCCuplHWyu6C9LYZmL5PEsnePIeJaiorsTEzzNk3Tsm1hw==
 
+cpf-mask-ng2@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/cpf-mask-ng2/-/cpf-mask-ng2-2.0.3.tgz#5c5c6463983ac919639f037b0ed556e292f63dbf"
+  integrity sha512-1L6PoiVgwM99EuMDGAG5NyddFc0wO2z6kZf32CVqu+28PdYY5omKGPAOz9cRwXNqKxmOEYIE8PJF1uFhEL3jJw==
+  dependencies:
+    vanilla-masker "^1.1.1"
+
 izimodal@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/izimodal/-/izimodal-1.5.1.tgz#a49145030d8d9edfc60dfc35ae1758e4cf8502f1"
@@ -24,7 +31,14 @@ izimodal@^1.5.1:
   dependencies:
     jquery "~2"
 
-jquery@^3.4.1:
+jquery-confirm@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/jquery-confirm/-/jquery-confirm-3.3.4.tgz#493e29d33713e86d6eb0c5bd177677a4373310d1"
+  integrity sha512-SF3mX2kWAK9FP/Hut1uLHI30LPZ9DAki3Jq6JId9vg6AlMVugjlh40APtuxPQ/0C44XTkQFSVyRrg57NMbaicA==
+  dependencies:
+    jquery ">=1.6"
+
+jquery@>=1.6, jquery@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
@@ -33,6 +47,11 @@ jquery@~2:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02"
   integrity sha1-LInWiJterFIqfuoywUUhVZxsvwI=
+
+vanilla-masker@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vanilla-masker/-/vanilla-masker-1.2.0.tgz#c2830e9d994a5fecd2261506477c2707fe589756"
+  integrity sha1-woMOnZlKX+zSJhUGR3wnB/5Yl1Y=
 
 vegas@^2.4.4:
   version "2.4.4"
