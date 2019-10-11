@@ -8,7 +8,6 @@
     "@fortawesome/fontawesome-free": "^5.10.2",
     "bootstrap": "^4.3.1",
     "bulma": "^0.7.5",
-    "cpf-mask-ng2": "^2.0.3",
     "izimodal": "^1.5.1",
     "jquery": "^3.4.1",
     "jquery-confirm": "^3.3.4",

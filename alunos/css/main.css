@@ -1,7 +1,7 @@
 body {
   background: #89909f;
   font-size: 12px;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   overflow: hidden;
 }
@@ -97,6 +97,7 @@ main {
   background: #ebecee;
   margin-left: -2rem;
   position: relative;
+  height: auto;
 }
 main > header {
   padding: 3rem 3rem 0 3rem;

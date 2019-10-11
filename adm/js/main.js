@@ -53,7 +53,6 @@ $(() => {
                     action: function () {
                         $.ajax({
                             type: "DELETE",
-                            btnClass: 'btn-dark',
                             success: function () {
                                 $.alert({
                                     title: "Produto excluido",
