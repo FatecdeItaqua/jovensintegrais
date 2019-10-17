@@ -1,3 +1,14 @@
+<style>
+    label {
+        font-size: 15px;
+        margin: 10px 0 0 0;
+        font-weight: bold;
+    }
+    .salvar {
+        margin: 20px 0 20px 0;
+        width: 100%;
+    }
+</style>
 <header>
         <div class="containe-fluid">
             <div class="row">
@@ -10,6 +21,49 @@
     </header>
     <section>
         <div class="container">
-            
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <form method="POST" id="saude">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>Realiza atividades fisicas?</label>
+                                <input name="atvfisica" id="atvfisica" type="text" placeholder="Ex: Sim, Futebol e volei" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>Tem algum vicio?</label>
+                                <input name="vicio" id="vicio" type="text" placeholder="Ex: Não"
+                                    class="form-control money">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>Tem alguma doença?</label>
+                                <input name="doenca" id="doenca" type="text" placeholder="Ex: Não"
+                                    class="form-control money">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>Toma algum medicamento?</label>
+                                <input name="medicamento" id="medicamento" type="text" placeholder="Ex: Sim, antialérgico"
+                                    class="form-control money">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label>Finalidade do medicamento?</label>
+                                <input name="finalidade" id="finalidade" type="text" placeholder="Ex: Diminuir a intensidade da rinite"
+                                    class="form-control money">
+                            </div>
+                        </div>
+                            
+                        <button type="submit" class="salvar btn btn-primary"> Salvar </button>
+                    </form>
+                </div>
+    
+    
+            </div>
         </div>
     </section>

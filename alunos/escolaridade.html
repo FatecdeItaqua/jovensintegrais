@@ -1,15 +1,72 @@
+<style>
+    label {
+        font-size: 15px;
+        margin: 10px 0 0 0;
+        font-weight: bold;
+    }
+
+    .salvar {
+        margin: 20px 0 20px 0;
+        width: 100%;
+    }
+</style>
 <header>
-        <div class="containe-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <h1 class="title">Escolaridade</h1>
-                </div>
+    <div class="containe-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="title">Escolaridade</h1>
             </div>
         </div>
-        <hr>
-    </header>
-    <section>
-        <div class="container">
-            
+    </div>
+    <hr>
+</header>
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <form method="POST" id="escolaridade">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Escolaridade</label>
+                            <select class="form-control">
+                                <option value="fundamental">Ensino Fundamental</option>
+                                <option value="medio">Ensino Médio</option>
+                                <option value="superior">Ensino Superior</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--Nome e Estado Civil -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Nome da Escola</label>
+                            <input name="nomedaescola" type="text" placeholder="Ex: Fatec de Itaquaquecetuba"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Curso</label>
+                            <input name="curso" type="text"
+                                placeholder="Ex: Tecnologo em Gestão da Tecnologia da Informação" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Ano de Ingresso</label>
+                            <input name="anoingresso" type="text" class="form-control" placeholder="Ex: 2015">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Ano de Conclusão</label>
+                            <input name="anoconclusao" type="text" class="form-control" placeholder="Ex: 2018">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="salvar btn btn-primary"> Salvar </button>
+                </form>
+            </div>
+
+
         </div>
-    </section>
+    </div>
+</section>

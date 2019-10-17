@@ -1,15 +1,77 @@
+<style>
+    label {
+        font-size: 15px;
+        margin: 10px 0 0 0;
+        font-weight: bold;
+    }
+
+    .salvar {
+        margin: 20px 0 20px 0;
+        width: 100%;
+    }
+</style>
 <header>
-        <div class="containe-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <h1 class="title">Responsáveis</h1>
-                </div>
+    <div class="containe-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="title">Responsáveis</h1>
             </div>
         </div>
-        <hr>
-    </header>
-    <section>
-        <div class="container">
-            
+    </div>
+    <hr>
+</header>
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <form method="POST" id="responsaveis">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Profissão</label>
+                            <input tname="profissao" type="text" placeholder="Ex: Psicologo" class="form-control">
+                        </div>
+                    </div>
+
+                    <!--Nome e Estado Civil -->
+                    <div class="form-row">
+                        <div class="form-group col-md-9">
+                            <label>Nome Completo </label>
+                            <input name="nomecompleto" type="text" placeholder="Ex: João Miguel" class="form-control">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Estado Civil</label>
+                            <select class="form-control">
+                                <option value="S">Solteiro</option>
+                                <option value="Se">Separado</option>
+                                <option value="C">Casado</option>
+                                <option value="D">Divorciado</option>
+                                <option value="V">Viúvo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--CPF, Data de Nascimento e Telefone -->
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label>CPF</label>
+                            <input name="cpf" type="text" class="form-control" placeholder="Ex: 999.999.999-99"
+                                data-mask="000.000.000-00">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Data de Nascimento</label>
+                            <input name="nascimento" type="text" class="form-control" placeholder="Ex: 10/10/2020"
+                                data-mask="00/00/0000">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Telefone</label>
+                            <input name="telefone" type="text" class="form-control" placeholder="Ex: (11) 99999-9999"
+                                data-mask="(00) 00000-0000">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="salvar btn btn-primary"> Salvar </button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+</section>

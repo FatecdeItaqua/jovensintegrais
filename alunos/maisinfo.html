@@ -1,15 +1,152 @@
+<style>
+    label {
+        font-size: 15px;
+        margin: 10px 0 0 0;
+        font-weight: bold;
+    }
+
+    .radio {
+        margin-top: 2px;
+    }
+
+    .salvar {
+        margin: 20px 0 20px 0;
+        width: 100%;
+    }
+</style>
 <header>
-        <div class="containe-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <h1 class="title">Mais Informações</h1>
-                </div>
+    <div class="containe-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="title">Mais Informações</h1>
             </div>
         </div>
-        <hr>
-    </header>
-    <section>
-        <div class="container">
-            
+    </div>
+    <hr>
+</header>
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <form method="POST" id="infogerais">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Foi indicado por alguém?</label>
+                            <input name="indicado" id="indicado" type="text" placeholder="Ex: Sim, João Miguel"
+                                class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>O que você espera que o projeto mude na sua vida?</label>
+                            <textarea
+                                placeholder="Ex: Espero adquirir um conhecimento especifico para estar preparado para o mercado de trabalho"
+                                class="form-control" name="mudancadevida" id="mudancadevida" maxlength="400"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Frequenta alguma religião?</label>
+                            <input name="religiao" id="religiao" type="text" placeholder="Ex: Sim, 'religião'"
+                                class="form-control">
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Possui o habito de ler?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="leitura" id="leitura" value="sim">
+                                <label class="form-check-label radio">Sim</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="leitura" id="leitura" value="nao">
+                                <label class="form-check-label radio">Não</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Pratica atividade holistica?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="holistica" id="holistica"
+                                    value="sim">
+                                <label class="form-check-label radio">Sim</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="holistica" id="holistica" value="nao">
+                                <label class="form-check-label radio">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Qual é a sua motivação para fazer este projeto?</label>
+                            <textarea placeholder="Ex: Melhorar pessoalmente e profissionalmente" class="form-control"
+                                name="motivacao" id="motivacao" maxlength="400" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Qual é a sua visão de futuro?</label>
+                            <textarea placeholder="Como você esperar estar daqui 5 anos" class="form-control"
+                                name="futuro" id="futuro" maxlength="400" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Cite seus pontos fortes</label>
+                            <input name="pfortes" id="pfortes" type="text" placeholder="Ex: Coloque seus pontos fortes"
+                                class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Cite seus pontos fracos</label>
+                            <input name="pfracos" id="pfracos" type="text" placeholder="Ex: Coloque seus pontos fracos"
+                                class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Como você se vê atualmente</label>
+                            <textarea placeholder="Descreva como você se vê atualmente" class="form-control"
+                            name="comoseve" id="comoseve" maxlength="500" rows="5"></textarea>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Como você acha que os outros te enxergam?</label>
+                            <textarea placeholder="Descreva como você acha que os outros te enxergam" class="form-control"
+                                name="comooutrosteve" id="comooutrosteve" maxlength="500" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Para você qual o significado da vida?</label>
+                            <textarea placeholder="Descreva o que você acha que é o significado da vida" class="form-control"
+                            name="vida" id="vida" maxlength="500" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Qual seu maior sonho?</label>
+                            <input name="sonho" id="sonho" type="text" placeholder="Ex: Descreva seu maior sonho"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Como podemos te ajudar com este sonho?</label>
+                            <textarea placeholder="Descreva como você acha que podemos te auxiliar neste sonho" class="form-control"
+                                name="auxiliosonho" id="auxiliosonho" maxlength="500" rows="5"></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="salvar btn btn-primary"> Salvar </button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+</section>

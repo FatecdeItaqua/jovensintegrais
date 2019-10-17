@@ -1,16 +1,84 @@
+<style>
+    label {
+        font-size: 15px;
+        margin: 10px 0 0 0;
+        font-weight: bold;
+    }
+
+    .radio{
+        margin-top:2px;
+    }
+    .salvar {
+        margin: 20px 0 20px 0;
+        width: 100%;
+    }
+</style>
 <header>
-        <div class="containe-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <h1 class="title">Socioeconômicos</h1>
-                </div>
-                
+    <div class="containe-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="title">Socioeconômicos</h1>
             </div>
+
         </div>
-        <hr>
-    </header>
-    <section>
-        <div class="container">
-            
+    </div>
+    <hr>
+</header>
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <form method="POST" id="socioeconomicos">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Com quem você mora?</label>
+                            <select class="form-control">
+                                <option value="familia">Meus Pais</option>
+                                <option value="sozinho">Sozinho</option>
+                                <option value="filhos">Meus filhos</option>
+                                <option value="conjuge">Meu cônjuge</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Qual a sua renda mensal?</label>
+                            <input name="rendamensal" type="text" placeholder="Ex: 1.200,00"
+                                class="form-control money">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label>Trabalha Atualmente?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="trabalho" id="trabalho" value="sim" checked>
+                                <label class="form-check-label radio">Sim</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="trabalho" id="trabalho" value="nao">
+                                <label class="form-check-label radio">Não</label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Função</label>
+                            <input name="funcao" type="text"
+                                placeholder="Ex: Gestor de TI" class="form-control">
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="salvar btn btn-primary"> Salvar </button>
+                </form>
+            </div>
+
+
         </div>
-    </section>
+    </div>
+</section>
+<script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<script>
+    $('.money').mask('000.000,00', { reverse: true });
+</script>

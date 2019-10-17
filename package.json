@@ -11,6 +11,7 @@
     "izimodal": "^1.5.1",
     "jquery": "^3.4.1",
     "jquery-confirm": "^3.3.4",
+    "jquery-mask-plugin": "^1.14.16",
     "vegas": "^2.4.4"
   }
 }
