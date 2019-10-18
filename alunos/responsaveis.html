@@ -1,15 +1,3 @@
-<style>
-    label {
-        font-size: 15px;
-        margin: 10px 0 0 0;
-        font-weight: bold;
-    }
-
-    .salvar {
-        margin: 20px 0 20px 0;
-        width: 100%;
-    }
-</style>
 <header>
     <div class="containe-fluid">
         <div class="row">
@@ -28,7 +16,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label>Profissão</label>
-                            <input tname="profissao" type="text" placeholder="Ex: Psicologo" class="form-control">
+                            <input name="profissao" id="profissao" type="text" placeholder="Ex: Psicologo" class="form-control">
                         </div>
                     </div>
 
@@ -36,11 +24,11 @@
                     <div class="form-row">
                         <div class="form-group col-md-9">
                             <label>Nome Completo </label>
-                            <input name="nomecompleto" type="text" placeholder="Ex: João Miguel" class="form-control">
+                            <input name="nomecompleto" id="nomecompleto" type="text" placeholder="Ex: João Miguel" class="form-control">
                         </div>
                         <div class="form-group col-md-3">
                             <label>Estado Civil</label>
-                            <select class="form-control">
+                            <select id="estadocivil" class="form-control">
                                 <option value="S">Solteiro</option>
                                 <option value="Se">Separado</option>
                                 <option value="C">Casado</option>
@@ -54,17 +42,17 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label>CPF</label>
-                            <input name="cpf" type="text" class="form-control" placeholder="Ex: 999.999.999-99"
+                            <input name="cpf" id="cpf" type="text" class="form-control" placeholder="Ex: 999.999.999-99"
                                 data-mask="000.000.000-00">
                         </div>
                         <div class="form-group col-md-3">
                             <label>Data de Nascimento</label>
-                            <input name="nascimento" type="text" class="form-control" placeholder="Ex: 10/10/2020"
+                            <input name="nascimento" id="nascimento" type="text" class="form-control" placeholder="Ex: 10/10/2020"
                                 data-mask="00/00/0000">
                         </div>
                         <div class="form-group col-md-4">
                             <label>Telefone</label>
-                            <input name="telefone" type="text" class="form-control" placeholder="Ex: (11) 99999-9999"
+                            <input name="telefone" id="telefone" type="text" class="form-control" placeholder="Ex: (11) 99999-9999"
                                 data-mask="(00) 00000-0000">
                         </div>
                     </div>

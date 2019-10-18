@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+#more {display: none;}
+#more1 {display: none;}
+#more2 {display: none;}
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -12,7 +18,7 @@
     <title>Academy - Education Course Template</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="img/core-img/favicon.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -38,7 +44,7 @@
                                 <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
                             </div>
                             <div class="login-content">
-                                <a href="#">Register / Login</a>
+                                <a href="login.html">Login/Entrar</a>
                             </div>
                         </div>
                     </div>
@@ -70,17 +76,17 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
+                                    <li><a href="blog.html">Blog</a>
+                                       <!-- <ul class="dropdown">
                                             <li><a href="index.html">Home</a></li>
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="course.html">Course</a></li>
+                                            <li><a href="sobre.html">Sobre</a></li>
+                                            <li><a href="course.html">Cursos</a></li>
                                             <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                           <li><a href="contato.html">Contato</a></li>
                                             <li><a href="elements.html">Elements</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a href="#">Mega Menu</a>
+                                    </li>-->
+                                    <!--<li><a href="#">Mega Menu</a>
                                         <div class="megamenu">
                                             <ul class="single-mega cn-col-4">
                                                 <li><a href="#">Home</a></li>
@@ -107,10 +113,10 @@
                                                 <img src="img/bg-img/bg-1.jpg" alt="">
                                             </div>
                                         </div>
-                                    </li>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="course.html">Course</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    </li>-->
+                                    <li><a href="sobre.html">Sobre</a></li>
+                                    <!--<li><a href="course.html">Cursos</a></li>-->
+                                    <li><a href="contato.html">Inscreva-se</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -119,7 +125,7 @@
                         <!-- Calling Info -->
                         <div class="calling-info">
                             <div class="call-center">
-                                <a href="tel:+654563325568889"><i class="icon-telephone-2"></i> <span>(+65) 456 332 5568 889</span></a>
+<!-- ALTERADO ESTE CAMPO -->    <a href="tel:(11) xxxxx-xxxx"><i class="icon-telephone-2"></i> <span>(011) xxxxx-xxxxx</span></a>
                             </div>
                         </div>
                     </nav>
@@ -150,18 +156,44 @@
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
                                     <!-- Post Thumb -->
                                     <div class="blog-post-thumb mb-50">
-                                        <img src="img/blog-img/1.jpg" alt="">
+                                        <img src="img/blog-img/001.jpg" alt="">
                                     </div>
                                     <!-- Post Title -->
-                                    <a href="#" class="post-title">Top ten courses we love for you to try</a>
+                                    <a href="#" class="post-title">Atividades do projeto</a>
                                     <!-- Post Meta -->
                                     <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
+                                        <p>By <a href="#">Viviane Silva </a> | <a href="#">03 de Outubro, 2019</a> | <a href="#">4 comentarios</a></p>
                                     </div>
-                                    <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
-                                    <!-- Read More btn -->
-                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
+<!-- ALTERADO ESTE CAMPO -->
+                                    <p> Em 2018 os jovens participantes da primeira turma do  
+				<span id="dots">...</span>
+				<span id="more">projeto tiveram viv�ncias das mais variadas.
+				1- foto vemos os jovens realizando atividade corporal de acroyoga e na 2 foto , temos atividade em grupo desenvolvida em um dos encontros.
+</span>
+</p>
+		<button onclick="myFunction()" id="myBtn" class="btn academy-btn btn-sm mt-15">LEIA MAIS</button>
+
+									<script>
+									function myFunction() {
+									  var dots = document.getElementById("dots");
+									  var moreText = document.getElementById("more");
+									  var btnText = document.getElementById("myBtn");
+										 if (dots.style.display === "none") {
+										dots.style.display = "inline";
+										btnText.innerHTML = "LEIA MAIS"; 
+										moreText.style.display = "none";
+									  } else {
+										dots.style.display = "none";
+										btnText.innerHTML = "LEIA MENOS"; 
+										moreText.style.display = "inline";
+									  }
+									}
+									</script>
+						
+                                    <!--Post Excerpt-->
+                                 
+	<!--Read More btn-->
+
                                 </div>
                             </div>
 
@@ -170,27 +202,29 @@
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="400ms">
                                     <!-- Post Thumb -->
                                     <div class="blog-post-thumb mb-50">
-                                        <img src="img/blog-img/2.jpg" alt="">
+                                        <img src="img/blog-img/002.jpg" alt="">
                                     </div>
                                     <!-- Post Title -->
-                                    <a href="#" class="post-title">Top ten courses we love for you to try</a>
+                                    <a href="#" class="post-title">Tuma 1 de 2018</a>
                                     <!-- Post Meta -->
                                     <div class="post-meta">
                                         <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
                                     </div>
                                     <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est.</p>
+                                    <p>Das atividades realizadas com o jovens temos na 1 imagem din�mica em grupo, na 2 Pablo em seu sal�o. Sonho realizado gra�as
+									a seu potencial com um empurraozinho do projeto.</p>
                                     <!-- Read More btn -->
                                     <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
                                 </div>
                             </div>
 
-                            <!-- Single Blog Start -->
+                           
+                           <!-- Single Blog Start -->
                             <div class="col-12">
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="500ms">
                                     <!-- Post Thumb -->
                                     <div class="blog-post-thumb mb-50">
-                                        <img src="img/blog-img/3.jpg" alt="">
+                                        <img src="img/blog-img/05.jpg" alt="">
                                     </div>
                                     <!-- Post Title -->
                                     <a href="#" class="post-title">Top ten courses we love for you to try</a>
@@ -207,6 +241,7 @@
 
                         </div>
                     </div>
+                                    <!--Post Excerpt-->
                     <!-- Pagination Area Start -->
                     <div class="academy-pagination-area wow fadeInUp" data-wow-delay="400ms">
                         <nav>
@@ -224,25 +259,25 @@
                         <!-- Blog Post Widget -->
                         <div class="blog-post-search-widget mb-30">
                             <form action="#" method="post">
-                                <input type="search" name="search" id="Search" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+<!-- ALTERA��O NESTE CAMPO--><input type="search" name="Search" id="Search" placeholder="Busca">
+                               <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </form>
                         </div>
 
                         <!-- Blog Post Catagories -->
                         <div class="blog-post-categories mb-30">
-                            <h5>Categories</h5>
+                            <h5>Categorias</h5>
                             <ul>
-                                <li><a href="#">Courses</a></li>
-                                <li><a href="#">Education</a></li>
-                                <li><a href="#">Teachers</a></li>
-                                <li><a href="#">Uncategorized</a></li>
+                                <li><a href="#">Cursos</a></li>
+                                <li><a href="#">Educacao</a></li>
+                                <!--ALTERA��O NESTE CAMPOS --><li><a href="sobre.html">Professores</a></li>
+                                <li><a href="#">Sem categoria</a></li>
                             </ul>
                         </div>
 
                         <!-- Latest Blog Posts Area -->
                         <div class="latest-blog-posts mb-30">
-                            <h5>Latest Posts</h5>
+                            <h5>Ultimas postagens</h5>
                             <!-- Single Latest Blog Post -->
                             <div class="single-latest-blog-post d-flex mb-30">
                                 <div class="latest-blog-post-thumb">
@@ -292,10 +327,9 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Add Widget -->
+		                        <!-- Add Widget -->
                         <div class="add-widget">
-                            <a href="#"><img src="img/blog-img/add.png" alt=""></a>
+                        <!--ALTERA��O NESTE CAMPO -->    <!--<a href="#"><img src="img/blog-img/add.png" alt=""></a> -->
                         </div>
                     </div>
                 </div>
@@ -315,28 +349,27 @@
                             <div class="widget-title">
                                 <a href="#"><img src="img/core-img/logo2.png" alt=""></a>
                             </div>
-                            <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod erat. Ut at erat et arcu pulvinar cursus a eget.</p>
-                            <div class="footer-social-info">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                           <div class="footer-social-info">
+                                <!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+                                <!--<a href="#"><i class="fa fa-twitter"></i></a>-->
+                                <!--<a href="#"><i class="fa fa-dribbble"></i></a>-->
+                                <!--<a href="#"><i class="fa fa-behance"></i></a>-->
+                                <!--<a href="#"><i class="fa fa-instagram"></i></a>-->
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <!-- Footer Widget Area -->
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="footer-widget mb-100">
                             <div class="widget-title">
-                                <h6>Usefull Links</h6>
+                                <h6>Links</h6>
                             </div>
                             <nav>
                                 <ul class="useful-links">
                                     <li><a href="#">Home</a></li>
-                                    <li><a href="#">Services &amp; Features</a></li>
-                                    <li><a href="#">Accordions and tabs</a></li>
-                                    <li><a href="#">Menu ideas</a></li>
+                     <!-- ALTERADO ESTE CAMPO--><li><a href="blog.html">Blog</a></li>
+                                    <li><a href="#">Sobre</a></li>
+                                    <li><a href="Contato.html">Inscreva-se</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -345,7 +378,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="footer-widget mb-100">
                             <div class="widget-title">
-                                <h6>Gallery</h6>
+                                <h6>Galeria</h6>
                             </div>
                             <div class="gallery-list d-flex justify-content-between flex-wrap">
                                 <a href="img/bg-img/gallery1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/gallery1.jpg" alt=""></a>
@@ -361,19 +394,21 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="footer-widget mb-100">
                             <div class="widget-title">
-                                <h6>Contact</h6>
+                                <h6>Contato</h6>
                             </div>
-                            <div class="single-contact d-flex mb-30">
+
+<!--REALIZADO ALTERA��O NESTE CAMPO-->
+                             <div class="single-contato d-flex mb-30">
                                 <i class="icon-placeholder"></i>
-                                <p>4127/ 5B-C Mislane Road, Gibraltar, UK</p>
+                                <p>Rua Fernandes Pinheiro, 295 - Vila Azevedo, Tatuap�</p>
                             </div>
-                            <div class="single-contact d-flex mb-30">
+                            <div class="single-contato d-flex mb-30">
                                 <i class="icon-telephone-1"></i>
-                                <p>Main: 203-808-8613 <br>Office: 203-808-8648</p>
+                                <p>Telefone: (11) xxxx-xxxx<br>Whatsapp: (11) xxxxx-xxxx</p>
                             </div>
-                            <div class="single-contact d-flex">
+                            <div class="single-contato d-flex">
                                 <i class="icon-contract"></i>
-                                <p>office@yourbusiness.com</p>
+                                <p>E-mail</p>
                             </div>
                         </div>
                     </div>
@@ -385,7 +420,9 @@
                 <div class="row">
                     <div class="col-12">
                         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;
+<script>document.write(new Date().getFullYear());</script> Jovens Integrais <!--<i class="fa fa-heart-o" aria-hidden="true"></i> by <!--<a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                 </div>

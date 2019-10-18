@@ -1,15 +1,3 @@
-<style>
-    label {
-        font-size: 15px;
-        margin: 10px 0 0 0;
-        font-weight: bold;
-    }
-
-    .salvar {
-        margin: 20px 0 20px 0;
-        width: 100%;
-    }
-</style>
 <header>
     <div class="containe-fluid">
         <div class="row">
@@ -28,7 +16,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label>Escolaridade</label>
-                            <select class="form-control">
+                            <select id="escolaridade" class="form-control">
                                 <option value="fundamental">Ensino Fundamental</option>
                                 <option value="medio">Ensino Médio</option>
                                 <option value="superior">Ensino Superior</option>
@@ -40,25 +28,25 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label>Nome da Escola</label>
-                            <input name="nomedaescola" type="text" placeholder="Ex: Fatec de Itaquaquecetuba"
+                            <input name="nomedaescola" id="nomedaescola" type="text" placeholder="Ex: Fatec de Itaquaquecetuba"
                                 class="form-control">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label>Curso</label>
-                            <input name="curso" type="text"
+                            <input name="curso" id="curso" type="text"
                                 placeholder="Ex: Tecnologo em Gestão da Tecnologia da Informação" class="form-control">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Ano de Ingresso</label>
-                            <input name="anoingresso" type="text" class="form-control" placeholder="Ex: 2015">
+                            <input name="anoingresso" id="anoingresso" type="text" class="form-control" placeholder="Ex: 2015">
                         </div>
                         <div class="form-group col-md-6">
                             <label>Ano de Conclusão</label>
-                            <input name="anoconclusao" type="text" class="form-control" placeholder="Ex: 2018">
+                            <input name="anoconclusao" id="anoconclusao" type="text" class="form-control" placeholder="Ex: 2018">
                         </div>
                     </div>
 
