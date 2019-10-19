@@ -7,23 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	
-	<script>
 
-function formatar(src, mask)
-{
-  var i = src.value.length;
-  var saida = mask.substring(0,1);
-  var texto = mask.substring(i)
-if (texto.substring(0,1) != saida)
-  {
-                src.value += texto.substring(0,1);
-  }
-}
+    <script>
 
-</script>
-<script src="jquery.js" type="text/javascript"></script> 
-<script src="jquery.maskedinput.js" type="text/javascript"></script> 
+        function formatar(src, mask) {
+            var i = src.value.length;
+            var saida = mask.substring(0, 1);
+            var texto = mask.substring(i)
+            if (texto.substring(0, 1) != saida) {
+                src.value += texto.substring(0, 1);
+            }
+        }
+
+    </script>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="jquery.maskedinput.js" type="text/javascript"></script>
     <!-- Title -->
     <title>Jovens Integrais</title>
 
@@ -98,7 +96,8 @@ if (texto.substring(0,1) != saida)
                         <!-- Calling Info -->
                         <div class="calling-info">
                             <div class="call-center">
-                                <a href="tel:+654563325568889"><i class="icon-telephone-2"></i> <span>(11) xxxx-xxxx</span></a>
+                                <a href="tel:+654563325568889"><i class="icon-telephone-2"></i> <span>(11)
+                                        xxxx-xxxx</span></a>
                             </div>
                         </div>
                     </nav>
@@ -122,7 +121,7 @@ if (texto.substring(0,1) != saida)
     </div>
 
     <!-- ##### Contact Area Start ##### -->
-    
+
     <!-- ##### Contact Area Start ##### -->
     <section class="contact-area">
         <div class="container">
@@ -134,17 +133,20 @@ if (texto.substring(0,1) != saida)
                             <div class="col-12 col-lg-5">
                                 <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
                                     <div class="section-heading text-left">
-                                        
-                                    <h3>Inscreva-se</h3>
-                                        
+
+                                        <h3>Inscreva-se</h3>
+
                                     </div>
 
                                     <!-- Contact Social Info -->
-                                    
+
 
 
                                     <div>
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.734534615221!2d-46.57384968497857!3d-23.542048566764556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5eebb5209a35%3A0x1d6b624e79a2048d!2sR.%20Fernandes%20Pinheiro%2C%20295%20-%20Tatuap%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1571009957763!5m2!1spt-BR!2sbr" width="400" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.734534615221!2d-46.57384968497857!3d-23.542048566764556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5eebb5209a35%3A0x1d6b624e79a2048d!2sR.%20Fernandes%20Pinheiro%2C%20295%20-%20Tatuap%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1571009957763!5m2!1spt-BR!2sbr"
+                                            width="400" height="350" frameborder="0" style="border:0;"
+                                            allowfullscreen=""></iframe>
 
                                     </div>
 
@@ -164,17 +166,17 @@ if (texto.substring(0,1) != saida)
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info d-flex">
                                         <div class="contact-icon mr-15">
-                                            
+
                                         </div>
-                                        
+
                                     </div>
 
                                     <!-- Single Contact Info -->
                                     <div class="single-contact-info d-flex">
                                         <div class="contact-icon mr-15">
-                                           
+
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -183,21 +185,25 @@ if (texto.substring(0,1) != saida)
                                 <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
                                     <form action="#" method="post">
                                         <input type="text" class="form-control" id="Nome" placeholder="Nome">
-                                        <input onkeypress="formatar(this,'000.000.000-00')" id=dta placeholder="CPF" type="text" class="form-control" maxlength="14">
-                                        <input type="date" class="form-control" id="data" placeholder="Data de Nascimento">
-                                        <input type="tel" class="form-control" id="tel" placeholder="Telefone">
+                                        <input onkeypress="formatar(this,'000.000.000-00')" id=dta placeholder="CPF"
+                                            type="text" class="form-control" maxlength="14">
+                                        <input type="date" class="form-control" id="data"
+                                            placeholder="Data de Nascimento">
+                                        <input type="tel" class="form-control" id="tel" placeholder="Telefone"
+                                            data-mask="(00) 00000-0000">
                                         <input type="text" class="form-control" id="prof" placeholder="Profissão">
-                                        <input type="text" class="form-control" id="ec" placeholder="Estado Cívil" list="listaestilos"/>										
-											<datalist id="listaestilos">
-												<option value="Casado">
-												<option value="Solteiro">
-												<option value="Separado">	
-												<option value="Divorciado">	
-												<option value="Viúvo">													
-											</datalist>
-										<input type="email" class="form-control" id="email" placeholder="E-mail">
-										<input type="password" class="form-control" id="pass" placeholder="Senha">
-                                        
+                                        <input type="text" class="form-control" id="ec" placeholder="Estado Cívil"
+                                            list="listaestilos" />
+                                        <datalist id="listaestilos">
+                                            <option value="Casado">
+                                            <option value="Solteiro">
+                                            <option value="Separado">
+                                            <option value="Divorciado">
+                                            <option value="Viúvo">
+                                        </datalist>
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                        <input type="password" class="form-control" id="pass" placeholder="Senha">
+
                                         <button class="btn academy-btn mt-30" type="submit">Inscreva-se</button>
                                     </form>
                                 </div>
@@ -221,8 +227,8 @@ if (texto.substring(0,1) != saida)
                             <div class="widget-title">
                                 <a href="#"><img src="img/core-img/logo2.png" alt=""></a>
                             </div>
-                            
-                          <!--  <div class="footer-social-info">
+
+                            <!--  <div class="footer-social-info">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                                 <a href="#"><i class="fa fa-dribbble"></i></a>
@@ -298,9 +304,10 @@ if (texto.substring(0,1) != saida)
                     <div class="col-12">
                         <p>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-   <!--ALTERADO ESTE CAMPO -->
-                         Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> Jovens Integrais <!--<i class="fa fa-heart-o" aria-hidden="true"></i> by <!--<a
+                            <!--ALTERADO ESTE CAMPO -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> Jovens Integrais
+                            <!--<i class="fa fa-heart-o" aria-hidden="true"></i> by <!--<a
                                 href="https://colorlib.com" target="_blank">Colorlib</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
@@ -325,6 +332,8 @@ if (texto.substring(0,1) != saida)
     <!-- Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
     <script src="js/google-map/map-active.js"></script>
+    <!-- Mascara -->
+    <script src="node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
 </body>
 
 </html>
