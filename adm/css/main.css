@@ -1,7 +1,7 @@
 body {
   background: #89909f;
   font-size: 12px;
-  height: 100vh;
+  min-height:100vh;
   margin: 0;
   overflow: hidden;
 }

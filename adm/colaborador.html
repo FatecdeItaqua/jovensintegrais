@@ -65,8 +65,7 @@
                         <label for="txbNome" class="text-form">Nome:</label>
                         <input class="form-control" type="text" id="txtNome" class="" placeholder="Nome" required><br>
                         <label for="txbCpf" class="text-form">CPF:</label>
-                        <input class="form-control" type="text" id="txtCpf" class="" placeholder="CPF"
-                            oninput="mascara(this, 'cpf')" required><br>
+                        <input class="form-control" type="text" id="txtCpf" class="" placeholder="CPF" data-mask="000.000.000-00" required><br>
                         <label for="txbEmail" class="text-form">E-Mail:</label>
                         <input class="form-control" type="email" id="txtEmail" class="" placeholder="E-Mail"
                             required><br>
@@ -136,3 +135,5 @@
 </script>
 
 <script src="../node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<script src="../candidato/js/cep.js"></script>
