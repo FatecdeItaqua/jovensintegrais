@@ -60,27 +60,139 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-10">
-                <form class="form" method="POST" action="#">
-                    <div class="form-group">
-                        <label for="txbNome" class="text-form">Nome:</label>
-                        <input class="form-control" type="text" id="txtNome" class="" placeholder="Nome" required><br>
-                        <label for="txbCpf" class="text-form">CPF:</label>
-                        <input class="form-control" type="text" id="txtCpf" class="" placeholder="CPF" data-mask="000.000.000-00" required><br>
-                        <label for="txbEmail" class="text-form">E-Mail:</label>
-                        <input class="form-control" type="email" id="txtEmail" class="" placeholder="E-Mail"
-                            required><br>
-                        <label for="txbSenha" class="text-form">Senha:</label>
-                        <input class="form-control" type="password" id="txtSenha" class="" placeholder="Senha"
-                            required><br>
-                        <label for="cbbCargo" class="text-form">Cargo:</label>
-                        <select class="form-control" id="Cargo" required>
-                            <option value="" disabled selected>Selecione uma opção</option>
-                            <option value="Psicólogo">Psicólogo</option>
-                            <option value="Voluntário">Voluntário</option>
-                            <option value="Estagiário">Estagiário</option>
-                        </select><br />
-                        <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+                <form method="POST" id="dadosadm">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Profissão</label>
+                            <select class="form-control" id="cbbCargo" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="Psicólogo">Psicólogo</option>
+                                <option value="Voluntário">Voluntário</option>
+                                <option value="Estagiário">Estagiário</option>
+                            </select>
+                        </div>
                     </div>
+
+                    <!--Email e Senha -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Email</label>
+                            <input name="txbEmail" id="txbEmail" type="email" class="form-control"
+                                placeholder="Ex: joao.miguel@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label>Senha</label>
+                            <input name="txbSenha" id="txbSenha" type="password" class="form-control"
+                                placeholder="********">
+                        </div>
+                    </div>
+
+                    <!--Nome e Estado Civil -->
+                    <div class="form-row">
+                        <div class="form-group col-md-9">
+                            <label>Nome Completo </label>
+                            <input name="txbNome" id="txbNome" type="text" placeholder="Ex: João Miguel"
+                                class="form-control">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Estado Civil</label>
+                            <select id="estadocivil" class="form-control">
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="S">Solteiro</option>
+                                <option value="Se">Separado</option>
+                                <option value="C">Casado</option>
+                                <option value="D">Divorciado</option>
+                                <option value="V">Viúvo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- CPF -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>CPF</label>
+                            <input name="txbCpf" id="txbCpf" type="text" class="form-control"
+                                placeholder="Ex: 999.999.999-99" data-mask="000.000.000-00">
+                        </div>
+                    </div>
+                    <!--CPF, Data de Nascimento e Telefone -->
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label>Data de Nascimento</label>
+                            <input name="nascimento" id="nascimento" type="date" class="form-control"
+                                placeholder="Ex: 10/10/2020">
+                        </div>
+                        <div class="form-group col-md-7">
+                            <label>Telefone</label>
+                            <input name="telefone" id="telefone" type="text" class="form-control"
+                                placeholder="Ex: (11) 99999-9999" data-mask="(00) 00000-0000">
+                        </div>
+                    </div>
+
+
+                    <!-- Endereço -->
+                    <div class="containe-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <br>
+                                <h1 class="title">Endereço</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <!-- CEP -->
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label>CEP<input name="cep" id="cep" type="text" class="form-control"
+                                    placeholder="Ex: 08592-000" data-mask="00000-000" id="cep" value="" maxlength="9"
+                                    onblur="pesquisacep(this.value);" /></label>
+                        </div>
+                    </div>
+
+
+                    <!-- Logradouro, Número e complemento-->
+                    <div class="form-row">
+
+                        <div class="form-group col-md-6">
+                            <label>Logradouro</label>
+                            <input name="rua" id="rua" type="text" tabindex="1" class="form-control"
+                                placeholder="Ex: Rua Londrina">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label>Número</label>
+                            <input name="numero" id="numero" tabindex="0" type="text" class="form-control"
+                                placeholder="Ex: 57">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Complemento</label>
+                            <input name="complemento" id="complemento" type="text" class="form-control"
+                                placeholder="Ex: bloco, apartamento">
+                        </div>
+
+                    </div>
+                    <!-- Bairro, Cidade e Estado -->
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label>Bairro</label>
+                            <input name="bairro" id="bairro" type="text" class="form-control"
+                                placeholder="Ex: Jardim Mirai">
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label>Cidade</label>
+                            <input name="cidade" id="cidade" type="text" class="form-control"
+                                placeholder="Ex: Itaquaquecetuba">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label>Estado</label>
+                            <input name="uf" id="uf" type="text" class="form-control" placeholder="Ex: SP">
+                        </div>
+                    </div>
+
+                    <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+
                 </form>
             </div>
         </div>
@@ -93,28 +205,139 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-10">
-                <form class="form" method="POST" action="#">
-                    <div class="form-group">
-                        <label for="txbNome" class="text-form">Nome:</label>
-                        <input class="form-control" type="text" id="txbNome" class="" placeholder="Nome" required><br>
-                        <label for="txbCpf" class="text-form">CPF:</label>
-                        <input class="form-control" type="text" id="txbCpf" class="" placeholder="CPF"
-                            oninput="mascara(this, 'cpf')" required><br>
-                        <label for="txbEmail" class="text-form">E-Mail:</label>
-                        <input class="form-control" type="email" id="txbEmail" class="" placeholder="E-Mail"
-                            required><br>
-                        <label for="txbSenha" class="text-form">Senha:</label>
-                        <input class="form-control" type="password" id="txbSenha" class="" placeholder="Senha"
-                            required><br>
-                        <label for="cbbCargo" class="text-form">Cargo:</label>
-                        <select class="form-control" id="cbbCargo" required>
-                            <option value="" disabled selected>Selecione uma opção</option>
-                            <option value="Psicólogo">Psicólogo</option>
-                            <option value="Voluntário">Voluntário</option>
-                            <option value="Estagiário">Estagiário</option>
-                        </select><br />
-                        <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+                <form method="POST" id="dadosadm">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Profissão</label>
+                            <select class="form-control" id="cbbCargo" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="Psicólogo">Psicólogo</option>
+                                <option value="Voluntário">Voluntário</option>
+                                <option value="Estagiário">Estagiário</option>
+                            </select>
+                        </div>
                     </div>
+
+                    <!--Email e Senha -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Email</label>
+                            <input name="txbEmail" id="txbEmail" type="email" class="form-control"
+                                placeholder="Ex: joao.miguel@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label>Senha</label>
+                            <input name="txbSenha" id="txbSenha" type="password" class="form-control"
+                                placeholder="********">
+                        </div>
+                    </div>
+
+                    <!--Nome e Estado Civil -->
+                    <div class="form-row">
+                        <div class="form-group col-md-9">
+                            <label>Nome Completo </label>
+                            <input name="txbNome" id="txbNome" type="text" placeholder="Ex: João Miguel"
+                                class="form-control">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Estado Civil</label>
+                            <select id="estadocivil" class="form-control">
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="S">Solteiro</option>
+                                <option value="Se">Separado</option>
+                                <option value="C">Casado</option>
+                                <option value="D">Divorciado</option>
+                                <option value="V">Viúvo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- CPF -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>CPF</label>
+                            <input name="txbCpf" id="txbCpf" type="text" class="form-control"
+                                placeholder="Ex: 999.999.999-99" data-mask="000.000.000-00">
+                        </div>
+                    </div>
+                    <!--CPF, Data de Nascimento e Telefone -->
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label>Data de Nascimento</label>
+                            <input name="nascimento" id="nascimento" type="date" class="form-control"
+                                placeholder="Ex: 10/10/2020">
+                        </div>
+                        <div class="form-group col-md-7">
+                            <label>Telefone</label>
+                            <input name="telefone" id="telefone" type="text" class="form-control"
+                                placeholder="Ex: (11) 99999-9999" data-mask="(00) 00000-0000">
+                        </div>
+                    </div>
+
+
+                    <!-- Endereço -->
+                    <div class="containe-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <br>
+                                <h1 class="title">Endereço</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <!-- CEP -->
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label>CEP<input name="cep" id="cep" type="text" class="form-control"
+                                    placeholder="Ex: 08592-000" data-mask="00000-000" id="cep" value="" maxlength="9"
+                                    onblur="pesquisacep(this.value);" /></label>
+                        </div>
+                    </div>
+
+
+                    <!-- Logradouro, Número e complemento-->
+                    <div class="form-row">
+
+                        <div class="form-group col-md-6">
+                            <label>Logradouro</label>
+                            <input name="rua" id="rua" type="text" tabindex="1" class="form-control"
+                                placeholder="Ex: Rua Londrina">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label>Número</label>
+                            <input name="numero" id="numero" tabindex="0" type="text" class="form-control"
+                                placeholder="Ex: 57">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Complemento</label>
+                            <input name="complemento" id="complemento" type="text" class="form-control"
+                                placeholder="Ex: bloco, apartamento">
+                        </div>
+
+                    </div>
+                    <!-- Bairro, Cidade e Estado -->
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label>Bairro</label>
+                            <input name="bairro" id="bairro" type="text" class="form-control"
+                                placeholder="Ex: Jardim Mirai">
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label>Cidade</label>
+                            <input name="cidade" id="cidade" type="text" class="form-control"
+                                placeholder="Ex: Itaquaquecetuba">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label>Estado</label>
+                            <input name="uf" id="uf" type="text" class="form-control" placeholder="Ex: SP">
+                        </div>
+                    </div>
+
+                    <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+
                 </form>
             </div>
         </div>
@@ -124,13 +347,15 @@
     $("#modal").iziModal({
         title: 'Adicionar Colaborador',
         subtitle: 'Formulário para adicionar um novo Colaborador ao sistema',
-        headerColor: '#61ba6d'
+        headerColor: '#61ba6d',
+        width: 800
     });
 
     $("#modal-editar").iziModal({
         title: "Editar Colaborador",
         subtitle: 'Formulário para editar um novo Colaborador ao sistema',
-        headerColor: '#61ba6d'
+        headerColor: '#61ba6d',
+        width: 800
     })
 </script>
 
