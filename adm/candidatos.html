@@ -1,0 +1,69 @@
+<header>
+    <div class="containe-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="title">Candidatos</h1>
+            </div>
+        </div>
+    </div>
+    <hr>
+</header>
+
+<section>
+    <div class="container">
+        <br>
+        <div class="form-group input-group">
+            <input name="consulta" id="consulta" placeholder="Consultar" type="text" class="form-control">
+        </div>
+
+        <table class="table table-hover" id="listagem-candidatos">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Turma Pretendida</th>
+                    <th scope="col">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="turma-1">
+                    <td scope="row">Enrique Gomes</td>
+                    <td>400.289.224-00</td>
+                    <td>09/12/1996</td>
+                    <td>(11) 96325-8741</td>
+                    <td>TI</td>
+                    <td>
+                        <i class="fas fa-check aceitar-candidato" data-id="1"></i>
+                    </td>
+                </tr>
+                <tr id="turma-2">
+                    <td scope="row">Andrew Ribeiro</td>
+                    <td>456.321.789-50</td>
+                    <td>17/10/1994</td>
+                    <td>(11) 98765-4123</td>
+                    <td>RH</td>
+                    <td>
+                        <i class="fas fa-check aceitar-candidato" data-id="2"></i>
+                    </td>
+                </tr>
+                <tr id="turma-3">
+                    <td scope="row">Otavio Matilat</td>
+                    <td>159.753.862-40</td>
+                    <td>02/06/2000</td>
+                    <td>(11) 98234-6578</td>
+                    <td>Gestão de Pessoas</td>
+                    <td>
+                        <i class="fas fa-check aceitar-candidato" data-id="3"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<script src="../node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<script src="../candidato/js/cep.js"></script>
+<script src="js/candidatos.js"></script>

@@ -45,7 +45,7 @@ $(() => {
                                 $.alert({
                                     title: "Turma Desabilitada",
                                     content: null,
-                                    icon: "fa fa-trash black-text",
+                                    icon: "fa fa-eye black-text",
                                     theme: "modern"
                                 });
                             }
