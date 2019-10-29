@@ -1,0 +1,219 @@
+<header>
+    <div class="containe-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="title">Turmas</h1>
+            </div>
+            <div class="col-md-3 offset-md-5">
+                <button type="button" class="btn btn-dark nova-turma">Nova
+                    Turma</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+</header>
+<section>
+    <div class="container">
+        <table class="table table-hover" id="listagem-turmas">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Turma</th>
+                    <th scope="col">Ano</th>
+                    <th scope="col">Semestre</th>
+                    <th scope="col">Data de Inicio</th>
+                    <th scope="col">Data do Fim</th>
+                    <th scope="col">Responsável</th>
+                    <th scope="col">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="turma-1">
+                    <td scope="row">TI</td>
+                    <td>2019</td>
+                    <td>01</td>
+                    <td>01/02/2019</td>
+                    <td>06/06/2019</td>
+                    <td>Eduardo Santos</td>
+                    <td>
+                        <i class="fas fa-edit editar-turma" data-id="1"></i>
+                        <i class="fas fa-eye desabilitar-turma" data-id="1"></i>
+                    </td>
+                </tr>
+                <tr id="turma-2">
+                    <td scope="row">RH</td>
+                    <td>2019</td>
+                    <td>02</td>
+                    <td>01/07/2019</td>
+                    <td>06/11/2019</td>
+                    <td>Santana</td>
+                    <td>
+                        <i class="fas fa-edit editar-turma" data-id="2"></i>
+                        <i class="fas fa-eye desabilitar-turma" data-id="2"></i>
+                    </td>
+                </tr>
+                <tr id="turma-3">
+                    <td scope="row">Gestão de Pessoas</td>
+                    <td>2020</td>
+                    <td>01</td>
+                    <td>01/02/2020</td>
+                    <td>06/06/2020</td>
+                    <td>Eduardo Santos</td>
+                    <td>
+                        <i class="fas fa-edit editar-turma" data-id="3"></i>
+                        <i class="fas fa-eye desabilitar-turma" data-id="3"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+<!-- Modal Nova turma-->
+
+<div id="modal-turma">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-10">
+                <form method="POST" id="nova-turma">
+
+                    <!-- Resposável -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Responsável</label>
+                            <input name="responsavel" id="responsavel" type="text" class="form-control"
+                                placeholder="Insira o nome do responsável" required>
+                        </div>
+                    </div>
+
+                    <!-- Descrição da turma -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Descrição</label>
+                            <textarea class="form-control" name="turma" id="turma" maxlength="400" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Semestre e ano -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Semestre</label>
+                            <select class="form-control" id="semestre" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="1">Primeiro Semestre</option>
+                                <option value="2">Segundo Semestre</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Ano</label>
+                            <input name="ano" id="ano" type="text" class="form-control"
+                                placeholder="Ano de inicio da turma" required>
+                        </div>
+                    </div>
+
+                    <!-- Data de início e Data de termino -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Data de início</label>
+                            <input name="dinicio" id="dinicio" type="date" class="form-control"
+                                placeholder="Data de inicio da turma" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Data de término</label>
+                            <input name="dtermino" id="dtermino" type="date" class="form-control"
+                                placeholder="Data de término da turma" required>
+                        </div>
+                    </div>
+
+                    <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Editar Turma-->
+
+<div id="editar-turma">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-10">
+                <form method="POST" id="editar-turma">
+
+                    <!-- Resposável -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Responsável</label>
+                            <input name="eresponsavel" id="eresponsavel" type="text" class="form-control"
+                                placeholder="Insira o nome do responsável" required>
+                        </div>
+                    </div>
+
+                    <!-- Descrição da turma -->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label>Turma</label>
+                            <input name="eturma" id="eturma" type="text" class="form-control"
+                                placeholder="Insira a turma" required>
+                        </div>
+                    </div>
+
+                    <!-- Semestre e ano -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Semestre</label>
+                            <select class="form-control" id="esemestre" required>
+                                <option value="" disabled selected>Selecione uma opção</option>
+                                <option value="1">Primeiro Semestre</option>
+                                <option value="2">Segundo Semestre</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Ano</label>
+                            <input name="eano" id="eano" type="text" class="form-control"
+                                placeholder="Ano de inicio da turma" required>
+                        </div>
+                    </div>
+
+                    <!-- Data de início e Data de termino -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Data de início</label>
+                            <input name="edinicio" id="edinicio" type="date" class="form-control"
+                                placeholder="Data de inicio da turma" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Data de término</label>
+                            <input name="edtermino" id="edtermino" type="date" class="form-control"
+                                placeholder="Data de término da turma" required>
+                        </div>
+                    </div>
+
+                    <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#modal-turma").iziModal({
+        title: 'Adicionar Nova Turma',
+        subtitle: 'Formulário para adicionar uma nova turma ao sistema',
+        headerColor: '#61ba6d',
+        width: 800
+    });
+
+    $("#editar-turma").iziModal({
+        title: "Editar Turma",
+        subtitle: 'Formulário para editar uma nova turma ao sistema',
+        headerColor: '#61ba6d',
+        width: 800
+    })
+</script>
+
+<script src="../node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<script src="../candidato/js/cep.js"></script>
+<script src="js/turma.js"></script>
