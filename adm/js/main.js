@@ -17,6 +17,16 @@ $(() => {
         event.preventDefault();
         $('#modal').iziModal('open');
     });
+    
+    $(document).on('click', '.salvar', function (event) {
+        event.preventDefault();
+        $('#modal-senhaadm').iziModal('open');
+    });
+
+    function dadosFormulario(event){
+        event.preventDefault()
+        console.log("Click")
+    }
 
     //EDITAR COLABORADOR
 

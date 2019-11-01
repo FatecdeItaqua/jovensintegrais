@@ -244,3 +244,21 @@ label {
   margin: 20px 0 20px 0;
   width: 100%;
 }
+
+input[type=submit] {
+  width: 60%;
+  margin-top: 5%;
+  height: 40px;
+  margin: 5% 0 0 20%;
+  background: #61ba6d;
+  background-image: -webkit-linear-gradient(left, #61ba6d 0%, #83c331 51%, #61ba6d 100%);
+  background-image: linear-gradient(to right, #61ba6d 0%, #83c331 51%, #61ba6d 100%);
+  font-weight: bold;
+  color:black;
+  border: none;
+}
+
+input[type=submit]:hover {
+  color:rgb(61, 61, 61);
+  border: none;
+}

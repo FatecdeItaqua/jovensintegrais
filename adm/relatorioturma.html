@@ -1,0 +1,58 @@
+<style>
+    h3 {
+        margin-top: 10px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+</style>
+<header>
+    <div class="containe-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="title">Relatório das Turmas</h1>
+            </div>
+        </div>
+    </div>
+    <hr>
+</header>
+
+<section>
+    <div class="container">
+        <table class="table table-hover" id="listagem-turmas">
+            <h3>Turma 01</h3>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Presenças</th>
+                    <th scope="col">Faltas</th>
+                    <th scope="col">Total de aulas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="turma-1">
+                    <td scope="row">Enrique Gomes</td>
+                    <td>10</td>
+                    <td>20</td>
+                    <td>30</td>
+                </tr>
+                <tr id="turma-2">
+                    <td scope="row">Eduardo Santos</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>30</td>
+                </tr>
+                <tr id="turma-3">
+                    <td scope="row">Gabriel Ferreira</td>
+                    <td>5</td>
+                    <td>25</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<script src="../node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<script src="../candidato/js/cep.js"></script>
+<script src="js/candidatos.js"></script>

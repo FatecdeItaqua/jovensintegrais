@@ -15,7 +15,8 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label>Profissão</label>
-                            <input name="profissao" id="profissao" type="text" placeholder="Ex: Psicologo" class="form-control">
+                            <input name="profissao" id="profissao" type="text" placeholder="Ex: Psicologo"
+                                class="form-control">
                         </div>
                     </div>
 
@@ -36,7 +37,8 @@
                     <div class="form-row">
                         <div class="form-group col-md-9">
                             <label>Nome Completo </label>
-                            <input name="nomecompleto" id="nomecompleto" type="text" placeholder="Ex: João Miguel" class="form-control">
+                            <input name="nomecompleto" id="nomecompleto" type="text" placeholder="Ex: João Miguel"
+                                class="form-control">
                         </div>
                         <div class="form-group col-md-3">
                             <label>Estado Civil</label>
@@ -59,13 +61,13 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label>Data de Nascimento</label>
-                            <input name="nascimento" id="nascimento" type="text" class="form-control" placeholder="Ex: 10/10/2020"
-                                data-mask="00/00/0000">
+                            <input name="nascimento" id="nascimento" type="text" class="form-control"
+                                placeholder="Ex: 10/10/2020" data-mask="00/00/0000">
                         </div>
                         <div class="form-group col-md-4">
                             <label>Telefone</label>
-                            <input name="telefone" id="telefone" type="text" class="form-control" placeholder="Ex: (11) 99999-9999"
-                                data-mask="(00) 00000-0000">
+                            <input name="telefone" id="telefone" type="text" class="form-control"
+                                placeholder="Ex: (11) 99999-9999" data-mask="(00) 00000-0000">
                         </div>
                     </div>
 
@@ -84,7 +86,9 @@
                     <!-- CEP -->
                     <div class="form-row">
                         <div class="form-group col-md-5">
-                            <label>CEP<input name="cep" id="cep" type="text" class="form-control" placeholder="Ex: 08592-000" data-mask="00000-000" id="cep" value="" maxlength="9" onblur="pesquisacep(this.value);"/></label>
+                            <label>CEP<input name="cep" id="cep" type="text" class="form-control"
+                                    placeholder="Ex: 08592-000" data-mask="00000-000" id="cep" value="" maxlength="9"
+                                    onblur="pesquisacep(this.value);" /></label>
                         </div>
                     </div>
 
@@ -94,11 +98,13 @@
 
                         <div class="form-group col-md-6">
                             <label>Logradouro</label>
-                            <input name="rua" id="rua" type="text" tabindex="1"  class="form-control" placeholder="Ex: Rua Londrina">
+                            <input name="rua" id="rua" type="text" tabindex="1" class="form-control"
+                                placeholder="Ex: Rua Londrina">
                         </div>
                         <div class="form-group col-md-2">
                             <label>Número</label>
-                            <input name="numero" id="numero" tabindex="0" type="text" class="form-control" placeholder="Ex: 57">
+                            <input name="numero" id="numero" tabindex="0" type="text" class="form-control"
+                                placeholder="Ex: 57">
                         </div>
                         <div class="form-group col-md-4">
                             <label>Complemento</label>
@@ -111,11 +117,13 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label>Bairro</label>
-                            <input name="bairro" id="bairro" type="text" class="form-control" placeholder="Ex: Jardim Mirai">
+                            <input name="bairro" id="bairro" type="text" class="form-control"
+                                placeholder="Ex: Jardim Mirai">
                         </div>
                         <div class="form-group col-md-5">
                             <label>Cidade</label>
-                            <input name="cidade" id="cidade" type="text" class="form-control" placeholder="Ex: Itaquaquecetuba">
+                            <input name="cidade" id="cidade" type="text" class="form-control"
+                                placeholder="Ex: Itaquaquecetuba">
                         </div>
                         <div class="form-group col-md-2">
                             <label>Estado</label>
@@ -123,12 +131,58 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="salvar btn btn-primary"> Salvar </button>
+
+                </form>
+
+                <button class="salvar btn btn-primary"> Salvar </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="modal-senhaadm">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-10">
+                <form method="POST" id="solicitarsenha">
+                    <label>Senha do Administrador</label>
+                    <input type="password" name="senhaadmin" id="senhaadmin" class="form-control" placeholder="********"
+                        required>
+                    <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
 
                 </form>
             </div>
         </div>
     </div>
-</header>
+</div>
+
+
+<script>
+    $("#modal-senhaadm").iziModal({
+        onOpened: function() {
+            let formSenhaAdm = $("#solicitarsenha")
+            formSenhaAdm.on("submit", function(e){
+                e.preventDefault()
+                //verificar se a senha do adm é vdd
+                $.ajax("url do backend que verifia senha do adm", {
+                    method: "POST",
+                    data: formSenhaAdm.serialize(),
+                    success: function() {
+                        let formDados = $("#dadosadm").serialize()
+
+                        $.ajax("url do backend que atualiza os dados", {
+                            method: "PUT",
+                            data: formDados,
+                            success: function() {
+                                izitoast.show("Atualizado com sucesso!")
+                                $("#modal-senhaadm").iziModal("close")
+                            }
+                        })
+                    }
+                })
+            })
+        }
+    });
+</script>
 <script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
 <script src="js/cep.js"></script>

@@ -12,6 +12,8 @@
     </div>
     <hr>
 </header>
+
+
 <section>
     <div class="container">
         <table class="table table-hover" id="listagem-colaboradores">
@@ -55,12 +57,14 @@
         </table>
     </div>
 </section>
+
+
 <!-- Modal Cadastrar Colaborador-->
 <div id="modal">
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-10">
-                <form method="POST" id="dadosadm">
+                <form method="POST" id="dadoscolaborador">
 
                     <div class="form-row">
                         <div class="form-group col-md-12">
@@ -191,7 +195,7 @@
                         </div>
                     </div>
 
-                    <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+                    <input class="salvar btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
 
                 </form>
             </div>
@@ -205,12 +209,12 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-10">
-                <form method="POST" id="dadosadm">
+                <form method="POST" id="editar-dadoscolaborador">
 
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label>Profissão</label>
-                            <select class="form-control" id="cbbCargo" required>
+                            <select class="form-control" id="editar-cbbCargo" required>
                                 <option value="" disabled selected>Selecione uma opção</option>
                                 <option value="Psicólogo">Psicólogo</option>
                                 <option value="Voluntário">Voluntário</option>
@@ -223,14 +227,14 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label>Email</label>
-                            <input name="txbEmail" id="txbEmail" type="email" class="form-control"
+                            <input name="editar-txbEmail" id="editar-txbEmail" type="email" class="form-control"
                                 placeholder="Ex: joao.miguel@gmail.com">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-8">
                             <label>Senha</label>
-                            <input name="txbSenha" id="txbSenha" type="password" class="form-control"
+                            <input name="editar-txbSenha" id="editar-txbSenha" type="password" class="form-control"
                                 placeholder="********">
                         </div>
                     </div>
@@ -239,12 +243,12 @@
                     <div class="form-row">
                         <div class="form-group col-md-9">
                             <label>Nome Completo </label>
-                            <input name="txbNome" id="txbNome" type="text" placeholder="Ex: João Miguel"
+                            <input name="editar-txbNome" id="editar-txbNome" type="text" placeholder="Ex: João Miguel"
                                 class="form-control">
                         </div>
                         <div class="form-group col-md-3">
                             <label>Estado Civil</label>
-                            <select id="estadocivil" class="form-control">
+                            <select id="editar-estadocivil" class="form-control">
                                 <option value="" disabled selected>Selecione</option>
                                 <option value="S">Solteiro</option>
                                 <option value="Se">Separado</option>
@@ -258,7 +262,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label>CPF</label>
-                            <input name="txbCpf" id="txbCpf" type="text" class="form-control"
+                            <input name="editar-txbCpf" id="editar-txbCpf" type="text" class="form-control"
                                 placeholder="Ex: 999.999.999-99" data-mask="000.000.000-00">
                         </div>
                     </div>
@@ -266,12 +270,12 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label>Data de Nascimento</label>
-                            <input name="nascimento" id="nascimento" type="date" class="form-control"
+                            <input name="editar-nascimento" id="editar-nascimento" type="date" class="form-control"
                                 placeholder="Ex: 10/10/2020">
                         </div>
                         <div class="form-group col-md-7">
                             <label>Telefone</label>
-                            <input name="telefone" id="telefone" type="text" class="form-control"
+                            <input name="editar-telefone" id="editar-telefone" type="text" class="form-control"
                                 placeholder="Ex: (11) 99999-9999" data-mask="(00) 00000-0000">
                         </div>
                     </div>
@@ -291,7 +295,7 @@
                     <!-- CEP -->
                     <div class="form-row">
                         <div class="form-group col-md-5">
-                            <label>CEP<input name="cep" id="cep" type="text" class="form-control"
+                            <label>CEP<input name="editar-cep" id="editar-cep" type="text" class="form-control"
                                     placeholder="Ex: 08592-000" data-mask="00000-000" id="cep" value="" maxlength="9"
                                     onblur="pesquisacep(this.value);" /></label>
                         </div>
@@ -303,17 +307,17 @@
 
                         <div class="form-group col-md-6">
                             <label>Logradouro</label>
-                            <input name="rua" id="rua" type="text" tabindex="1" class="form-control"
+                            <input name="editar-rua" id="editar-rua" type="text" tabindex="1" class="form-control"
                                 placeholder="Ex: Rua Londrina">
                         </div>
                         <div class="form-group col-md-2">
                             <label>Número</label>
-                            <input name="numero" id="numero" tabindex="0" type="text" class="form-control"
+                            <input name="editar-numero" id="editar-numero" tabindex="0" type="text" class="form-control"
                                 placeholder="Ex: 57">
                         </div>
                         <div class="form-group col-md-4">
                             <label>Complemento</label>
-                            <input name="complemento" id="complemento" type="text" class="form-control"
+                            <input name="editar-complemento" id="editar-complemento" type="text" class="form-control"
                                 placeholder="Ex: bloco, apartamento">
                         </div>
 
@@ -322,41 +326,109 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label>Bairro</label>
-                            <input name="bairro" id="bairro" type="text" class="form-control"
+                            <input name="editar-bairro" id="editar-bairro" type="text" class="form-control"
                                 placeholder="Ex: Jardim Mirai">
                         </div>
                         <div class="form-group col-md-5">
                             <label>Cidade</label>
-                            <input name="cidade" id="cidade" type="text" class="form-control"
+                            <input name="editar-cidade" id="editar-cidade" type="text" class="form-control"
                                 placeholder="Ex: Itaquaquecetuba">
                         </div>
                         <div class="form-group col-md-2">
                             <label>Estado</label>
-                            <input name="uf" id="uf" type="text" class="form-control" placeholder="Ex: SP">
+                            <input name="editar-uf" id="editar-uf" type="text" class="form-control"
+                                placeholder="Ex: SP">
                         </div>
                     </div>
 
-                    <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+                    <input class="salvar btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
 
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal Senha Administrador -->
+
+<div id="modal-senhaadm">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-10">
+                    <form method="POST" id="solicitarsenha">
+                        <label>Senha do Administrador</label>
+                        <input type="password" name="senhaadmin" id="senhaadmin" class="form-control" placeholder="********"
+                            required>
+                        <input class="btn btn-primary" type="submit" name="btnSalvar" value="Salvar">
+    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <script>
     $("#modal").iziModal({
         title: 'Adicionar Colaborador',
         subtitle: 'Formulário para adicionar um novo Colaborador ao sistema',
         headerColor: '#61ba6d',
-        width: 800
+        width: 800,
+        onOpened: function(){
+            let formAddColaborador = $("#dadoscolaborador")
+            formAddColaborador.on("submit", function(e){
+                e.preventDefault()
+            })
+        }
     });
 
     $("#modal-editar").iziModal({
         title: "Editar Colaborador",
         subtitle: 'Formulário para editar um novo Colaborador ao sistema',
         headerColor: '#61ba6d',
-        width: 800
+        width: 800,        
+        onOpened: function(){
+            let formAddColaborador = $("#editar-dadoscolaborador")
+            formAddColaborador.on("submit", function(e){
+                e.preventDefault()
+            })
+        }
     })
+
+    $("#modal-senhaadm").iziModal({
+        onOpened: function () {
+            let formSenhaAdm = $("#solicitarsenha")
+            formSenhaAdm.on("submit", function (e) {
+                e.preventDefault()
+                //verificar se a senha do adm é vdd
+                $.ajax("url do backend que verifia senha do adm", {
+                    method: "POST",
+                    data: formSenhaAdm.serialize(),
+                    success: function () {
+                        let formDados = $("#dadoscolaborador").serialize()
+                        let formEditarDados = $("#editar-dadoscolaborador").serialize()
+
+                        $.ajax("url do backend que atualiza os dados", {
+                            method: "PUT",
+                            data: formDados,
+                            success: function () {
+                                izitoast.show("Atualizado com sucesso!")
+                                $("#modal-senhaadm").iziModal("close")
+                            }
+                        })
+                        $.ajax("url do backend que insere os dados", {
+                            method: "GET",
+                            data: formDados,
+                            success: function () {
+                                izitoast.show("Dados cadastrados com sucesso!")
+                                $("#modal-senhaadm").iziModal("close")
+                            }
+                        })
+
+                    }
+                })
+            })
+        }
+    });
 </script>
 
 <script src="../node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
