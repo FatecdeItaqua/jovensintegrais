@@ -1,0 +1,84 @@
+<header>
+    <div class="containe-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="title">Publicar Status</h1>
+            </div>
+        </div>
+    </div>
+    <hr>
+</header>
+
+
+<section>
+    <div class="container">
+        <table class="table table-hover" id="listagem-professores">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Profissão</th>
+                    <th scope="col">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="colaborador-1">
+                    <td scope="row">Enrique Gomes</td>
+                    <td>Estagiário</td>
+                    <td>
+                        <i class="fas fa-comment-dots mensagem-colaborador" data-id="1"></i>
+                    </td>
+                </tr>
+                <tr id="colaborador-2">
+                    <td scope="row">Lucas Medeiros</td>
+                    <td>Voluntário</td>
+                    <td>
+                        <i class="fas fa-comment-dots mensagem-colaborador" data-id="2"></i>
+                    </td>
+                </tr>
+                <tr id="colaborador-3">
+                    <td scope="row">Gabriel Ferreira Campos</td>
+                    <td>Psicólogo</td>
+                    <td>
+                        <i class="fas fa-comment-dots mensagem-colaborador" data-id="3"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+<!-- Modal Mensagem Colaborador-->
+
+<div id="modal-mensagem">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-10">
+                <form method="POST" id="mensagem-dadoscolaborador">
+
+                    <label>Mensagem</label>
+                    <textarea class="form-control" name="mensagem" id="mensagem" maxlength="400" rows="5"></textarea>
+
+                    <button type="submit" class="salvar btn btn-primary"> Salvar </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $("#modal-mensagem").iziModal({
+        title: "Mensagem Colaborador",
+        subtitle: 'Formulário para mandar Mensagem para um Colaborador',
+        headerColor: '#61ba6d',
+        width: 800
+    })
+
+</script>
+
+<script src="../node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<script src="../candidato/js/cep.js"></script>
